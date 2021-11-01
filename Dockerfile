@@ -4,5 +4,5 @@ ENV KEMAL_ENV=production
 COPY ./ /home/app
 WORKDIR /home/app
 RUN ["shards" ,"install"]
-RUN ["shards", "build --release"]
+RUN ["shards", "build", "--release"]
 CMD ["sh", "-c", "/home/app/bin/kingofvnese -p $PORT"]
